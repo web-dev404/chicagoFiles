@@ -1,0 +1,162 @@
+.modal--about__content {
+	@include font('sf-ui', 500);
+	padding: 25px;
+	box-shadow: 0px 4px 20px rgba(128, 128, 128, 0.2);
+	border-radius: 15px;
+	max-width: 650px;
+	width: 100%;
+
+	flex-direction: column;
+	font-size: 14px;
+	text-align: left;
+
+	position: relative;
+
+	@media($media_sm) {
+		box-shadow: 0;
+		border-radius: 0;
+		padding: 25px 15px;
+
+	}
+}
+
+.modal--about__title {
+	@include font('sf-ui', 600);
+	font-size: 20px;
+
+	align-self: flex-start;
+}
+
+.modal--about__img {
+	margin-right: 50px;
+
+	@media($media_sm) {
+		margin: 0 0 30px 0;
+	}
+}
+
+.modal--about__img-inner {
+	min-width: 200px;
+	height: 300px;
+	margin-bottom: 50px;
+
+	@media($media_sm) {
+		width: 150px;
+		margin: 0 auto 50px;
+	}
+
+	img {
+		width: 100%;
+		max-height: auto;
+
+		margin-bottom: 35px;
+	}
+}
+
+.modal--about__m35 {
+	margin-bottom: 35px;
+}
+
+.modal--about__m20 {
+	margin-bottom: 20px;
+}
+
+.modal--about__m10 {
+	margin-top: 10px;
+}
+
+.modal--about__main {
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 60px;
+
+	@media($media_sm) {
+		display: block;
+	}
+}
+
+.modal--about__svg {
+	width: 25px;
+	height: 25px;
+}
+
+.modal--about__text {
+	flex-grow: 1;
+}
+
+.modal--about__price {
+	@include font('sf-ui', 600);
+	font-size: 20px;
+}
+
+.modal--about__category {
+	color: $gray;
+}
+
+.modal--about__inner {
+	display: flex;
+	align-items: center;
+}
+
+.colors__item {
+	background: #F4DFC5;
+	border: 2px solid $red;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 35px;
+	height: 35px;
+
+	margin-right: 10px;
+
+	&--white {
+		background: $white;
+		border-color: $gray;
+	}
+
+	&--black {
+		background: $black;
+		border-color: $gray;
+	}
+
+	&--red {
+		background: rgba($red, .8);
+		border-color: $gray;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.modal--about__size {
+	text-transform: uppercase;
+	margin-right: 28px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&.active {
+		color: $red;
+	}
+}
+
+.modal--about__svg {
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+}
+
+.modal--about__additional {
+	display: flex;
+	align-items: center;
+
+	color: $gray;
+
+	margin-right: 50px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}

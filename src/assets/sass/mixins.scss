@@ -1,0 +1,9 @@
+@mixin font($ff, $fw) {
+	font-family: $ff, sans-serif;
+	font-weight: $fw;
+}
+
+@mixin bg($bg) {
+	background: url($bg) no-repeat;
+	background-size: 100% 100%;
+}

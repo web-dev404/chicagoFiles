@@ -1,0 +1,180 @@
+.menu {
+	margin: 10px 10px 0 0;
+	flex-basis: 37%;
+
+	&--shop {
+		flex-basis: 22%;
+	}
+
+	&--war {
+		flex-basis: 27%;
+	}
+
+	@media($media_lg2) {
+		flex-basis: 50%;
+		margin: 10px 0 0;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&--lessons {
+		@media($media_xxl) {
+			display: none;
+		}
+	}
+
+	@media($media_sm) {
+		min-width: 250px;
+	}
+}
+
+.menu__logo,
+.menu__title,
+.menu__nav {
+	padding-left: 10px;
+}
+
+.logo {
+	max-width: 157px;
+
+	@media($media_lg) {
+		max-width: 130px;
+	}
+}
+
+.menu__title {
+	font-size: 18px;
+
+	@media($media_lg) {
+		font-size: 16px;
+	}
+}
+
+.menu__profile {
+	display: none;
+	align-items: center;
+	background: rgba($gray, .1);
+	padding: 20px 15px;
+	margin-top: 30px;
+
+	font-size: 12px;
+	@include font('sf-ui', 500);
+
+	@media($media_sm) {
+		display: flex;
+	}
+}
+
+.menu-profile__name {
+	margin-bottom: 10px;
+}
+
+.menu__svg {
+	width: 15px;
+	height: 15px;
+}
+
+.menu__nav {
+	margin-top: 50px;
+
+	@media($media_lg) {
+		margin-top: 30px;
+	}
+}
+
+.nav__link {
+	position: relative;
+	overflow: hidden;
+
+	display: block;
+
+	padding: 14px 50px 14px 55px;
+
+	font-size: 16px;
+
+	@media($media_xxl) {
+		padding: 15px;
+		display: inline-block;
+	}
+
+	@media($media_lg) {
+		padding: 7px 15px;
+	}
+
+	&.active {
+		background: rgba(128, 128, 128, 0.1);
+		border-radius: 5px;
+		width: 100%;
+
+		&:after {
+			content: '';
+
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: #FF0000
+		}
+	}
+
+	@media($media_lg) {
+		padding: 10px 15px;
+	}
+}
+
+.link__inner {
+	margin: 25px 0 40px 85px;
+
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+
+		left: -20px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1.5px;
+		height: 90%;
+		background: rgba($red, .4);
+	}
+
+	@media($media_xxl) {
+		margin: 25px 0 40px 50px;
+	}
+}
+
+.link__content {
+	margin-bottom: 15px;
+	position: relative;
+	color: $gray;
+	font-size: 14px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		background: red;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -23px;
+	}
+
+	&.active {
+		color: $black;
+	}
+
+	span {
+		cursor: pointer;
+	}
+}
