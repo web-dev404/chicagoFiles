@@ -1,0 +1,301 @@
+.speaker__content {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.speaker__items {
+	display: flex;
+	justify-content: space-between;
+
+	@media($media_sm) {
+		max-width: 100vw;
+		overflow-x: auto;
+	}
+}
+
+.speaker__courses {
+	padding: 0 25px 0 0;
+}
+
+.speaker__item {
+	padding: 15px;
+	margin-right: 15px;
+
+	flex-basis: 31%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: $white;
+	box-shadow: 0px 4px 10px rgba(128, 128, 128, 0.2);
+	border-radius: 15px;
+	overflow: hidden;
+
+	cursor: pointer;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&.active {
+		border: 1.5px solid $red;
+	}
+
+	@media($media_sm) {
+		min-width: 40%;
+	}
+	
+	@media($media_sm2) {
+		min-width: 50%;
+	}
+
+	@media($media_xs) {
+		min-width: 55%;
+	}
+}
+
+.speaker__item-text {
+	margin-right: 15px;
+}
+
+.speaker__svg {
+	width: 15px;
+	height: 15px;
+
+	margin: 0 6px 0 10px;
+}
+
+.speaker__item-svg {
+	width: 26px;
+	height: 26px;
+}
+
+.speaker__item-title {
+	@include font('sf-ui', 500);
+	font-size: 12px;
+
+	margin-bottom: 10px;
+}
+
+.courses__title-inner {
+	display: flex;
+	align-items: center;
+
+	@media($media_xl) {
+		padding-left: 25px;
+	}
+}
+
+.courses__title {
+	@include font('sf-ui', 600);
+	font-size: 20px;
+	position: relative;
+	margin-right: 50px;
+	color: $gray;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		background: red;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -23px;
+		display: none;
+	}
+
+	&.active {
+		color: $black;
+
+		&:before {
+			display: block;
+		}
+	}
+
+	&--lg {
+		@media($media_sm) {
+			display: none;
+		}
+	}
+}
+
+.courses__title--hidden {
+	@include font('sf-ui', 600);
+	font-size: 20px;
+
+	margin-bottom: 10px;
+	display: none;
+
+	@media($media_sm) {
+		display: block;
+	}
+}
+
+.courses__item {
+	background: $white;
+	box-shadow: 0px 4px 10px rgba($gray, 0.2);
+	border-radius: 20px;
+	padding: 15px;
+	margin-bottom: 20px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media($media_lg) {
+		padding: 8px;
+	}
+
+	@media($media_sm) {
+		display: none;
+	}
+
+	&--hidden {
+		margin: 0 auto 10px;
+		width: 80%;
+		height: 231px;
+		display: none;
+
+		@media($media_sm) {
+			display: block;
+		}
+
+		@media($media_sm2) {
+			margin: 0 0 10px;
+			width: 100%;
+		}
+	}
+}
+
+.course__last-price {
+	@include font('sf-ui', 600);
+	color: rgba($gray, .6);
+
+	margin-bottom: 5px;
+}
+
+.course__prices {
+	display: flex;
+	flex-direction: column;
+}
+
+.course__img {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&--pink {
+		background: $pink2;
+	}
+
+	&--pink-dark {
+		background: $pink_dark;
+	}
+
+	&--hidden {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		border-radius: 15px;
+		box-shadow: 0px 4px 10px rgba(128, 128, 128, 0.2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		cursor: pointer;
+	}
+}
+
+.course__svg {
+	width: 30px;
+	height: 30px;
+
+	&--hidden {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+.course__text {
+	@include font('sf-ui', 500);
+	font-size: 10px;
+
+	margin-left: 10px;
+
+	flex-basis: 50%;
+}
+
+.course__tags {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 15px;
+}
+
+.course__tag {
+	@include font('sf-ui', 700);
+	padding: 4px 20px;
+	margin-right: 25px;
+	background: $red_light;
+	border-radius: 5px;
+	color: $white;
+
+	&.active {
+		background: $red2;
+	}
+}
+
+.course__tags-span {
+	color: $gray;
+}
+
+.course__title {
+	@include font('sf-ui', 700);
+	text-transform: uppercase;
+	font-size: 14px;
+
+	margin-bottom: 10px;
+}
+
+.course__description {
+	font-size: 12px;
+}
+
+.course__price {
+	white-space: nowrap;
+}
+
+.course__btn {
+	@include font('sf-ui', 700);
+	font-size: 12px;
+	color: $red;
+
+	display: flex;
+	align-items: center;
+	padding: 10px 15px;
+	border: 1.5px solid $red;
+	border-radius: 10px;
+}
+
+.course__btn-svg {
+	width: 12px;
+	height: 12px;
+	fill: $red;
+
+	transform: rotate(-90deg);
+
+	margin-left: 8px;
+}
